@@ -34,7 +34,7 @@ Advanced features:
 %description -l pl
 To jest podstawowy Gatekeeper H.323.
 
-OpenGatekeeper obs³uguje podstwowe mo¿liwo¶ci Gatekeepera H.323, takie
+OpenGatekeeper obs³uguje podstawowe mo¿liwo¶ci Gatekeepera H.323, takie
 jak rejestracja, przyjmowanie, kontrola dostêpu, t³umaczenie adresów,
 monitorowanie i kontrola pasma.
 

@@ -1,7 +1,7 @@
 Summary:	H.323 basic gatekeeper
 Summary(pl):	Podstawowy gatekeeper H.323
 Name:		opengk
-Version:	1.2.2
+Version:	1.2.3
 Release:	1
 License:	MPL
 Group:		Networking/Daemons

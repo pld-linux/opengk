@@ -51,8 +51,7 @@ Zaawansowane mo¿liwo¶ci:
 PWLIBDIR=%{_prefix}; export PWLIBDIR
 OPENH323DIR=%{_prefix}; export OPENH323DIR
 
-%{__make} optshared OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions \
-		-D__DEPRECATED -D_GLIBCPP_DEPRECATED -fpermissive" 
+%{__make} optshared OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT

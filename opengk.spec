@@ -1,17 +1,18 @@
 Summary:	H.323 basic gatekeeper
 Summary(pl):	Podstawowy gatekeeper H.323
 Name:		opengk
-Version:	1.13.4
+Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
-Release:	2
+Release:	1
 License:	MPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/openh323/%{name}-v%{fver}-src.tar.gz
-# Source0-md5:	8a7f8a2f61ac4f8011568e874c9fbcca
-Patch0:		%{name}-mak_files.patch
+# Source0-md5:	714bef61405413dc40ea23a4d12dc592
+Patch0:		%{name}-cvs.patch
+Patch1:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.13.4-3
-BuildRequires:	pwlib-devel >= 1.6.5-3
+BuildRequires:	openh323-devel >= 1.15
+BuildRequires:	pwlib-devel >= 1.8
 %requires_eq	openh323
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,10 +51,12 @@ Zaawansowane mo¿liwo¶ci:
 %prep
 %setup -qn %{name}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} %{?debug:debug}%{!?debug:opt}shared \
-	OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+	CXX="%{__cxx}" \
+	OPTCCFLAGS="%{rpmcflags} -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT

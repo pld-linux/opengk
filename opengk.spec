@@ -1,14 +1,14 @@
 Summary:	H.323 basic gatekeeper
 Summary(pl):	Podstawowy gatekeeper H.323
 Name:		opengk
-Version:	1.0.3
+Version:	1.1.1
 Release:	1
 License:	MPL
 Group:		Networking/Daemons
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.7.8
+BuildRequires:	openh323-devel >= 1.8.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,7 +51,8 @@ Zaawansowane mo¿liwo¶ci:
 PWLIBDIR=%{_prefix}; export PWLIBDIR
 OPENH323DIR=%{_prefix}; export OPENH323DIR
 
-%{__make} optshared OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+%{__make} optshared OPTCCFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions \
+		-D__DEPRECATED -D_GLIBCPP_DEPRECATED -fpermissive" 
 
 %install
 rm -rf $RPM_BUILD_ROOT

@@ -1,9 +1,0 @@
-diff -urN opengk.org/Makefile opengk/Makefile
---- opengk.org/Makefile	Wed Jan  9 01:30:15 2002
-+++ opengk/Makefile	Wed Jan  9 01:31:27 2002
-@@ -35,4 +35,4 @@
- OPENH323DIR=$(HOME)/openh323
- endif
- 
--include $(OPENH323DIR)/openh323u.mak
-+include $(OPENH323DIR)/share/misc/openh323u.mak

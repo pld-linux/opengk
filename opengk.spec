@@ -8,8 +8,9 @@ Group:		Networking/Daemons
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.8.2
+BuildRequires:	openh323-devel >= 1.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+%requires_eq	openh323
 
 %description
 This is a very basic H.323 Gatekeeper.
@@ -59,12 +60,10 @@ install -d $RPM_BUILD_ROOT%{_bindir}
 
 install obj_*/%{name} $RPM_BUILD_ROOT%{_bindir}
 
-gzip -9nf *.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc *.txt
 %attr(755,root,root) %{_bindir}/*

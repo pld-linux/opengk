@@ -5,8 +5,6 @@ Version:	1.0.3
 Release:	1
 License:	MPL
 Group:		Networking/Daemons
-Group(de):	Netzwerkwesen/Server
-Group(pl):	Sieciowe/Serwery
 Source0:	http://www.openh323.org/bin/%{name}_%{version}.tar.gz
 Patch0:		%{name}-mak_files.patch
 URL:		http://www.openh323.org/

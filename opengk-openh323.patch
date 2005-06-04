@@ -1,0 +1,11 @@
+--- opengk/main.cxx.orig	2005-06-03 22:06:39.000000000 +0200
++++ opengk/main.cxx	2005-06-03 22:07:22.000000000 +0200
+@@ -859,7 +859,7 @@
+   }
+ #endif
+ 
+-  if (H323GatekeeperServer::TranslateAliasAddress(alias, aliases, address, isGkRouted /* FFU: , call */))
++  if (H323GatekeeperServer::TranslateAliasAddress(alias, aliases, address, isGkRouted, call))
+     return TRUE;
+ 
+   PString aliasString = H323GetAliasAddressString(alias);

@@ -10,8 +10,9 @@ Source0:	http://dl.sourceforge.net/openh323/%{name}-v%{fver}-src.tar.gz
 # Source0-md5:	714bef61405413dc40ea23a4d12dc592
 Patch0:		%{name}-cvs.patch
 Patch1:		%{name}-mak_files.patch
+Patch2:		%{name}-openh323.patch
 URL:		http://www.openh323.org/
-BuildRequires:	openh323-devel >= 1.15
+BuildRequires:	openh323-devel >= 1.17
 BuildRequires:	pwlib-devel >= 1.8
 %requires_eq	openh323
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -52,6 +53,7 @@ Zaawansowane mo¿liwo¶ci:
 %setup -qn %{name}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} %{?debug:debug}%{!?debug:opt}shared \

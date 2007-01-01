@@ -3,7 +3,7 @@ Summary(pl):	Podstawowy gatekeeper H.323
 Name:		opengk
 Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
-Release:	4
+Release:	5
 License:	MPL
 Group:		Networking/Daemons
 Source0:	http://dl.sourceforge.net/openh323/%{name}-v%{fver}-src.tar.gz

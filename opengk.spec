@@ -1,5 +1,5 @@
 Summary:	H.323 basic gatekeeper
-Summary(pl):	Podstawowy gatekeeper H.323
+Summary(pl.UTF-8):   Podstawowy gatekeeper H.323
 Name:		opengk
 Version:	1.1.1
 Release:	1
@@ -27,21 +27,21 @@ Advanced features:
 - Neighbour gatekeeper database
 - Registration time to live
 
-%description -l pl
+%description -l pl.UTF-8
 To jest podstawowy Gatekeeper H.323.
 
-OpenGatekeeper obs³uguje podstwowe mo¿liwo¶ci Gatekeepera H.323, takie
-jak rejestracja, przyjmowanie, kontrola dostêpu, t³umaczenie adresów,
+OpenGatekeeper obsÅ‚uguje podstwowe moÅ¼liwoÅ›ci Gatekeepera H.323, takie
+jak rejestracja, przyjmowanie, kontrola dostÄ™pu, tÅ‚umaczenie adresÃ³w,
 monitorowanie i kontrola pasma.
 
-Zaawansowane mo¿liwo¶ci:
-- routowane po³±czenia
-- wsparcie dla typów aliasów H.323v2 (numer, URL, transport id, adres
+Zaawansowane moÅ¼liwoÅ›ci:
+- routowane poÅ‚Ä…czenia
+- wsparcie dla typÃ³w aliasÃ³w H.323v2 (numer, URL, transport id, adres
   e-mail)
-- obs³uga przedrostków bramek
-- logowanie rejestracji i po³±czeñ
-- baza danych s±siednich gatekeeperów
-- czas obowi±zywania rejestracji.
+- obsÅ‚uga przedrostkÃ³w bramek
+- logowanie rejestracji i poÅ‚Ä…czeÅ„
+- baza danych sÄ…siednich gatekeeperÃ³w
+- czas obowiÄ…zywania rejestracji.
 
 %prep
 %setup -qn %{name}

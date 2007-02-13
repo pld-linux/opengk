@@ -1,5 +1,5 @@
 Summary:	H.323 basic gatekeeper
-Summary(pl.UTF-8):   Podstawowy gatekeeper H.323
+Summary(pl.UTF-8):	Podstawowy gatekeeper H.323
 Name:		opengk
 Version:	1.13.5
 %define fver	%(echo %{version} | tr . _)
